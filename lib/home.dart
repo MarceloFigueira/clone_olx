@@ -1,3 +1,4 @@
+import 'package:clone_olx/components/tabbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -26,6 +27,11 @@ class _HomeWidgetState extends State<HomeWidget> {
             icon: const Icon(Icons.favorite_border),
             onPressed: () {},
           ),
+        ],
+      ),
+      body: Column(
+        children: const [
+          TabBart(),
         ],
       ),
     );
