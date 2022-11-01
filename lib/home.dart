@@ -13,6 +13,20 @@ class _HomeWidgetState extends State<HomeWidget> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF692CD5),
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: () {},
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.favorite_border),
+            onPressed: () {},
+          ),
+        ],
       ),
     );
   }
