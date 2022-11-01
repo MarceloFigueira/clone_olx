@@ -1,4 +1,5 @@
 import 'package:clone_olx/components/floatbutton.dart';
+import 'package:clone_olx/components/itemlist.dart';
 import 'package:clone_olx/components/tabbar.dart';
 import 'package:flutter/material.dart';
 
@@ -30,9 +31,23 @@ class _HomeWidgetState extends State<HomeWidget> {
             ),
           ],
         ),
+        backgroundColor: Colors.grey[200],
         body: Column(
-          children: const [
-            TabBart(),
+          children: [
+            const TabBart(),
+            Expanded(
+              child: ListView.separated(
+                itemCount: 30,
+                itemBuilder: (BuildContext context, int index) {
+                  return const ItemList();
+                },
+                separatorBuilder: (BuildContext context, int index) {
+                  return Container(
+                    height: 10,
+                  );
+                },
+              ),
+            ),
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
