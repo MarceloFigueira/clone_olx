@@ -1,3 +1,4 @@
+import 'package:clone_olx/components/floatbutton.dart';
 import 'package:clone_olx/components/tabbar.dart';
 import 'package:flutter/material.dart';
 
@@ -12,28 +13,29 @@ class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF692CD5),
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () {},
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF692CD5),
+          leading: IconButton(
+            icon: const Icon(Icons.menu),
+            onPressed: () {},
+          ),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.favorite_border),
+              onPressed: () {},
+            ),
+          ],
         ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.favorite_border),
-            onPressed: () {},
-          ),
-        ],
-      ),
-      body: Column(
-        children: const [
-          TabBart(),
-        ],
-      ),
-    );
+        body: Column(
+          children: const [
+            TabBart(),
+          ],
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: const FloatButton());
   }
 }
